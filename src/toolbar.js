@@ -8,6 +8,7 @@ See https://quilljs.com/docs/modules/toolbar
 
 var React = require('react');
 var ReactDOMServer = require('react-dom/server');
+var createClass = require('create-react-class');
 var find = require('lodash/find');
 var isEqual = require('lodash/isEqual');
 var T = require('prop-types');
@@ -71,7 +72,7 @@ var defaultItems = [
 
 ];
 
-var QuillToolbar = React.createClass({
+var QuillToolbar = createClass({
 
 	displayName: 'Quill Toolbar',
 

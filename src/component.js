@@ -2,6 +2,7 @@
 
 var React = require('react');
 var ReactDOM = require('react-dom');
+var createClass = require('create-react-class');
 var QuillMixin = require('./mixin');
 var find = require('lodash/find');
 var some = require('lodash/some');
@@ -9,7 +10,7 @@ var isEqual = require('lodash/isEqual');
 var T = require('prop-types');
 var DOM = require('react-dom-factories');
 
-var QuillComponent = React.createClass({
+var QuillComponent = createClass({
 
 	displayName: 'Quill',
 
