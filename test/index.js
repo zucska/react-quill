@@ -8,6 +8,7 @@
 
 var React = require('react');
 var ReactQuill = require('../src/index');
+var DOM = require('react-dom-factories');
 var Quill = ReactQuill.Quill;
 var { mount, shallow } = require('enzyme');
 var chai = require('chai');
@@ -115,7 +116,7 @@ describe('<ReactQuill />', function() {
   })
 
   it('uses a custom editing area if provided', () => {
-    const editingArea = React.DOM.div({id:'venus'});
+    const editingArea = DOM.div({id:'venus'});
     const wrapper = mount(ReactQuillNode({}, editingArea));
     const quill = wrapper.getNode().getEditor();
     expect(wrapper.getDOMNode().querySelector('div#venus')).not.to.be.null;
